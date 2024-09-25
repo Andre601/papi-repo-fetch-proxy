@@ -2,7 +2,7 @@ export default defineCachedEventHandler(
   async (e) => {
     setHeader(e, "Access-Control-Allow-Origin", "*");
 
-    const { data } = await $repo("/resolve?r=placeholderapi&v=LATEST&g=me.clip&a=placeholderapi");
+    const { data } = await $repo("/latest/version/releases/me/clip/placeholderapi");
 
     return {
       name: data.version,
